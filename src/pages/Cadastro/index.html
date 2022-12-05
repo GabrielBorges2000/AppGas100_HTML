@@ -9,13 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/phosphor-icons"></script>
+    <img src="../assets/Gas.png" alt="">
     <title>Cadastro</title>
+    
+
 
     <style>
         body {
+
             margin: 0;
             padding: 0;
-            background-color: #E1E1E8;
+            background-color: #fff;
+            font-family: 'Roboto', sans-serif;
         }
 
         .Container {
@@ -28,28 +33,27 @@
 
             padding-bottom: 20px;
 
-            /* background: ${({ theme }) => theme.white} */
+            background: #FFFFFF;
         }
 
         .ImageContainer {
             width: 100%;
-            height: 375px;
+            height: 260px;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            background: ${({ theme })=>theme.header};
-        }
+            background: #5F9DF7;
 
+            @media (max-width: 720px) {
+                height: 260px;
 
-        @media (max-width: 720px) {
-            height: 260px;
-            height: 200px;
+                @media(max-width: 520px) {
+                    height: 200px;
+                }
             }
+
         }
-
-
-
 
         .Image {
             width: 50%;
@@ -75,16 +79,12 @@
 
             font-family: 'Roboto', sans-serif;
             font-size: 18px;
-            /* background-color: ${({ theme }) => theme.background}; */
+            background: #E1E1E8;
 
-            @media (max-width: 720px) {
-                width: 27%;
-
-            }
         }
 
         .InputContact {
-            width: 67%;
+            width: 50%;
 
             border-radius: 5px;
             border: none;
@@ -94,20 +94,18 @@
 
             font-family: 'Roboto', sans-serif;
             font-size: 18px;
-            /* background-color: ${({ theme }) => theme.background}; */
+            background: #E1E1E8;
 
-            @media (max-width: 720px) {
-                width: 67%;
-
-            }
         }
 
         .InputContainer {
-            width: 30%;
+            display: flex;
+            justify-content: center;
+            width: 60%;
             height: 40px;
+            gap: 10px;
 
             display: flex;
-            justify-content: space-between;
 
             border: none;
             outline: 0;
@@ -119,19 +117,20 @@
             font-size: 18px;
 
             @media (max-width: 720px) {
+
                 width: 35%;
 
-                @media (max-width: 620px) {
-                    width: 40%;
+                @media(max-width: 620px) {
+                    width: 50%;
 
-                    @media (max-width: 520px) {
-                        width: 45%;
+                    @media(max-width: 520px) {
+                        width: 60%;
 
-                        @media (max-width: 420px) {
-                            width: 50%;
+                        @media(max-width: 420px) {
+                            width: 70%;
 
-                            @media (max-width: 320px) {
-                                width: 60%;
+                            @media(max-width: 320px) {
+                                width: 80%;
 
                             }
 
@@ -142,23 +141,34 @@
                 }
 
             }
+
         }
 
         .Title {
             font-family: 'Roboto', sans-serif;
             font-size: 12px;
-            /* color: ${({ theme }) => theme.title}; */
+            color: #47474D;
             padding-top: 8px;
         }
 
+        .ButtonContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
 
         .Button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 50px;
             height: 50px;
             border: none;
-            /* background: ${({ theme }) => theme.header}; */
+            background: #5F9DF7;
             border-radius: 50px;
-            /* color: ${({ theme }) => theme.white}; */
+            color: #ffffff;
         }
 
         .TitleButton {
@@ -166,23 +176,19 @@
             font-family: 'Roboto', sans-serif;
             font-weight: bold;
             font-size: 12px;
-            /* color: ${({ theme }) => theme.title}; */
+            color: #47474D;
             align-items: center;
-            padding-top: 5px;
         }
 
-        .ButtonContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-        }
+
 
 
         .Card {
-            width: 90%;
-            z-index: 1;
+            display: flex;
+            justify-content: center;
 
+            z-index: 1;
+            width: 100%;
             margin-top: -120px;
 
             position: static;
@@ -190,9 +196,10 @@
             @media (max-width: 720px) {
                 margin-top: -100px;
             }
+
         }
 
-        ButtonProps {
+        .ButtonProps {
             width: 100%;
             margin-top: 20px;
 
@@ -201,59 +208,185 @@
             align-items: center;
             justify-content: space-evenly;
         }
+
+        /* Style Card */
+
+        .cards {
+            width: 90%;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-bottom: 1px solid #AEAEB3;
+        }
+
+        .logoGasNameContainer {
+            width: 41px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            color: #FFFFFF;
+            background-color: #03B252;
+        }
+
+        .logoGasName {
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(-0.25turn);
+        }
+
+        .cardDetailContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 95%;
+            height: 90%;
+            padding: 15px;
+        }
+
+        .titleStore {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15;
+            color: #7A7A80;
+        }
+
+        .storeDetails {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between
+        }
+
+        .noteContainer {
+
+            font-size: 12px;
+            font-weight: 500;
+
+
+        }
+
+        .noteTitle {
+            font-size: 12px;
+            font-weight: 500;
+
+            color: #7A7A80;
+        }
+
+        .noteNumber {
+            display: flex;
+            font-weight: bold;
+            font-size: 18px;
+
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+        }
+
+        /* .timeContainer{}; */
+
+        .timeTitle {
+            font-size: 12px;
+            font-weight: 500;
+
+            color: #7A7A80;
+        }
+
+        .timeNumber {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .valorTitle {
+            font-size: 12px;
+            font-weight: 500;
+
+            color: #7A7A80;
+        }
+
+        .valorNumber {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Style Card Finish */
     </style>
+
 </head>
 
 <body>
-    <Container>
-        <ImageContainer>
-            <Image src={Gas} />
-        </ImageContainer>
-
-        <Card>
-            <StoreCard typeCard={bag.typeCard} logoName={bag.logoName} titleStore={bag.titleStore} note={bag.note}
-                timeMinutes={bag.timeMinute} timeSeconds={bag.timeSeconds} valor={bag.valor} />
-        </Card>
-
-        <InputContainer>
-            <InputDDD value={phoneDDD} onChange={e=> setPhoneDDD(e.target.value)}
-                placeholder="DDD"
-                maxLength={2}
-                minLength={1}
-                type="number"
-                />
-                <InputContact value={phoneContact} onChange={e=> setPhoneContact(e.target.value)}
-                    placeholder="Seu Telefone"
-                    maxLength={10}
-                    minLength={1}
-                    type="number"
-                    />
-        </InputContainer>
+    <div class='Container'>
+        <div class='ImageContainer'>
+            <!-- <img class='Image' src="../assets/Gas.png" alt="gas"> -->
+        </div>
 
 
-        <Title> Usaremos seu número de telefone para informá-lo(a) </Title>
-        <Title> sobre sua entrega.</Title>
-        <ButtonProps>
-            <ButtonContainer>
-                <NavLink to="/">
-                    <Button type="button">
-                        <CaretLeft size={32} />
-                    </Button>
-                </NavLink>
-                <TitleButton>Voltar</TitleButton>
-            </ButtonContainer>
+        <div class='Card'>
+            <!-- Card config initial -->
+            <div class='cards' id="lblcards">
+                <div class='logoGasNameContainer' id="lbllogoGasNameContainer">
+                    <p class='logoGasName' id="lbllogoGasName">
+                        SupergasBraz
+                    </p>
+                </div>
 
-            <ButtonContainer>
-                <NavLink to="/CadastroName">
-                    <Button type="submit" onClick={handleNext}>
-                        <CaretRight size={32} />
-                    </Button>
-                </NavLink>
-                <TitleButton>Próximo</TitleButton>
-            </ButtonContainer>
-        </ButtonProps>
+                <div class='cardDetailContainer' id="lblcardDetailContainer">
 
-    </Container>
+                    <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
+
+                    <div class='storeDetails' id="lblstoreDetails">
+                        <div class='noteContainer' id="lblnoteContainer">
+                            <p class='noteTitle' id="lblnoteTitle"> Nota </p>
+                            <p class='noteNumber' id="lblnoteNumber">
+                                <b>4.8</b>
+                                <i class='ph-star-fill' style="font-size:15px; color: #ffd700;" id="lbliconstar"></i>
+                            </p>
+                        </div>
+                        <div class='timeContainer' id="lbltimeContainer">
+                            <p class='timeTitle' id="lbltimeTitle"> Tempo Médio </p>
+                            <p class='timeNumber'><b>40-30</b> min</p>
+                        </div>
+                        <div class='valorContainer' id="lblvalorContainer">
+                            <p class='valorTitle' id="lblvalorTitle"> Preço </p>
+                            <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Card config finish -->
+
+        <div class='InputContainer'>
+            <input class='InputDDD' placeholder="DDD" maxLength={2} minLength={1} type="number" />
+            <input class='InputContact' placeholder="Seu Telefone" maxLength={10} minLength={1} type="number" />
+        </div>
+
+
+        <p class='Title'> Usaremos seu número de telefone para informá-lo(a) </p>
+        <p class='Title'> sobre sua entrega.</p>
+        <div class='ButtonProps'>
+            <div class='ButtonContainer'>
+                <buttom class="Button">
+                    <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </buttom>
+                <p class='TitleButton'>Voltar</p>
+            </div>
+
+            <div class='ButtonContainer'>
+                <buttom class="Button">
+                    <i class="ph-caret-right" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </Buttom>
+                <p class='TitleButton'>Próximo</p>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
