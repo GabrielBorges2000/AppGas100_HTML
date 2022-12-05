@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <title>Cadastro</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #E1E1E8;
+        }
+
+        .Container {
+            width: auto;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding-bottom: 20px;
+
+            /* background: ${({ theme }) => theme.white} */
+        }
+
+        .ImageContainer {
+            width: 100%;
+            height: 375px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: ${({ theme })=>theme.header};
+        }
+
+
+        @media (max-width: 720px) {
+            height: 260px;
+            height: 200px;
+            }
+        }
+
+
+
+
+        .Image {
+            width: 50%;
+
+            padding-bottom: 60px;
+
+            @media (max-width: 720px) {
+                padding-bottom: 40px;
+                width: 40%;
+
+            }
+        }
+
+
+        .InputDDD {
+            width: 27%;
+
+            border-radius: 5px;
+            border: none;
+            outline: 0;
+
+            padding-left: 3px;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            /* background-color: ${({ theme }) => theme.background}; */
+
+            @media (max-width: 720px) {
+                width: 27%;
+
+            }
+        }
+
+        .InputContact {
+            width: 67%;
+
+            border-radius: 5px;
+            border: none;
+            outline: 0;
+
+            padding-left: 3px;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            /* background-color: ${({ theme }) => theme.background}; */
+
+            @media (max-width: 720px) {
+                width: 67%;
+
+            }
+        }
+
+        .InputContainer {
+            width: 30%;
+            height: 40px;
+
+            display: flex;
+            justify-content: space-between;
+
+            border: none;
+            outline: 0;
+            border-radius: 3px;
+
+            margin-top: 30px;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+
+            @media (max-width: 720px) {
+                width: 35%;
+
+                @media (max-width: 620px) {
+                    width: 40%;
+
+                    @media (max-width: 520px) {
+                        width: 45%;
+
+                        @media (max-width: 420px) {
+                            width: 50%;
+
+                            @media (max-width: 320px) {
+                                width: 60%;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .Title {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            /* color: ${({ theme }) => theme.title}; */
+            padding-top: 8px;
+        }
+
+
+        .Button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            /* background: ${({ theme }) => theme.header}; */
+            border-radius: 50px;
+            /* color: ${({ theme }) => theme.white}; */
+        }
+
+        .TitleButton {
+
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            /* color: ${({ theme }) => theme.title}; */
+            align-items: center;
+            padding-top: 5px;
+        }
+
+        .ButtonContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+
+        .Card {
+            width: 90%;
+            z-index: 1;
+
+            margin-top: -120px;
+
+            position: static;
+
+            @media (max-width: 720px) {
+                margin-top: -100px;
+            }
+        }
+
+        ButtonProps {
+            width: 100%;
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <Container>
+        <ImageContainer>
+            <Image src={Gas} />
+        </ImageContainer>
+
+        <Card>
+            <StoreCard typeCard={bag.typeCard} logoName={bag.logoName} titleStore={bag.titleStore} note={bag.note}
+                timeMinutes={bag.timeMinute} timeSeconds={bag.timeSeconds} valor={bag.valor} />
+        </Card>
+
+        <InputContainer>
+            <InputDDD value={phoneDDD} onChange={e=> setPhoneDDD(e.target.value)}
+                placeholder="DDD"
+                maxLength={2}
+                minLength={1}
+                type="number"
+                />
+                <InputContact value={phoneContact} onChange={e=> setPhoneContact(e.target.value)}
+                    placeholder="Seu Telefone"
+                    maxLength={10}
+                    minLength={1}
+                    type="number"
+                    />
+        </InputContainer>
+
+
+        <Title> Usaremos seu número de telefone para informá-lo(a) </Title>
+        <Title> sobre sua entrega.</Title>
+        <ButtonProps>
+            <ButtonContainer>
+                <NavLink to="/">
+                    <Button type="button">
+                        <CaretLeft size={32} />
+                    </Button>
+                </NavLink>
+                <TitleButton>Voltar</TitleButton>
+            </ButtonContainer>
+
+            <ButtonContainer>
+                <NavLink to="/CadastroName">
+                    <Button type="submit" onClick={handleNext}>
+                        <CaretRight size={32} />
+                    </Button>
+                </NavLink>
+                <TitleButton>Próximo</TitleButton>
+            </ButtonContainer>
+        </ButtonProps>
+
+    </Container>
+</body>
+
+</html>
