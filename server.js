@@ -16,9 +16,11 @@ app.get("/cadastro/name", function (req, res){
 app.get("/pagamento/compra", function (req, res){
     res.sendFile(__dirname + "/src/pages/pagamento/compra/index.html");
 });
+
 app.get("/pagamento/pagemento", function (req, res){
     res.sendFile(__dirname + "/src/pages/pagemento/pagamento/index.html");
 });
+
 app.get("/pagamento/confirmacao", function (req, res){
     res.sendFile(__dirname + "/src/pages/pagemento/confirmacao/index.html");
 });
