@@ -17,6 +17,7 @@
       margin: 0;
       padding: 0;
       background-color: #E1E1E8;
+      font-family: 'Roboto', sans-serif;
     }
 
     .container {
@@ -43,30 +44,6 @@
       border-bottom: 1 solid #AEAEB3;
     }
 
-    .headerContainer {
-      width: 90%;
-      height: 45px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #5F9DF7;
-      padding: 1rem 5%;
-      position: fixed;
-      z-index: 1;
-    }
-
-    .title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #FFFFFF;
-    }
-
-    .icons {
-      display: flex;
-      justify-content: space-between;
-    }
-
     .headerContent {
       height: 60px;
       display: flex;
@@ -74,7 +51,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 5%;
-      margin-top: 60px;
+
       background-color: #FFFFFF;
     }
 
@@ -123,6 +100,11 @@
       margin-top: 2px;
     }
 
+
+
+
+    /* style card */
+
     .cards {
       width: 90%;
       height: 120px;
@@ -137,7 +119,7 @@
     }
 
     .logoGasNameContainer {
-      width: 40px;
+      width: 41px;
       height: 100%;
       display: flex;
       align-items: center;
@@ -160,6 +142,7 @@
       padding-bottom: 20px;
       padding-left: 10px;
       padding-right: 10px;
+      pointer-events: none;
     }
 
     .titleStore {
@@ -238,16 +221,7 @@
     <!-- Header Config  -->
 
     <header class="header" id="lblheader">
-      <div class="headerContainer" id="lblheaderContainer">
-        <p class="title" id="lbltitle">
-          Escolha uma revenda
-        </p>
-        <div class="icons" id="lblicons">
-          <i class="ph-arrows-down-up" style="font-size: 24px; color: #FFFFFF; font-weight: bold;" id="lbliconarrow"></i>
-          <i class="ph-question" style="font-size: 24px; color: #FFFFFF; font-weight: bold;" id="lbliconquestion"></i>
-        </div>
-      </div>
-
+    
       <div class="headerContent" id="lblheaderContent">
         <div class='pesquisa' id="lblpesquisa">
           <p class='titleSecond' id="lbltitleSecond">
@@ -265,42 +239,7 @@
         </div>
       </div>
     </header>
-
-    <!--  Card Config  -->
-
-
-    <main class='cards' id="lblcards">
-      <div class='logoGasNameContainer' id="lbllogoGasNameContainer">
-        <p class='logoGasName' id="lbllogoGasName">
-          SupergasBraz
-        </p>
-      </div>
-
-      <div class='cardDetailContainer' id="lblcardDetailContainer">
-
-        <p class='titleStore' id="lbltitleStore">
-          Tonho Gas
-        </p>
-
-        <div class='storeDetails' id="lblstoreDetails">
-          <div class='noteContainer' id="lblnoteContainer">
-            <p class='noteTitle' id="lblnoteTitle"> Nota </p>
-            <p class='noteNumber' id="lblnoteNumber">
-              <b>4.8</b>
-              <i class='ph-star-fill' style="font-size:15px; color: #ffd700;" id="lbliconstar"></i>
-            </p>
-          </div>
-          <div class='timeContainer' id="lbltimeContainer">
-            <p class='timeTitle' id="lbltimeTitle"> Tempo Médio </p>
-            <p class='timeNumber'><b>40-30</b> min</p>
-          </div>
-          <div class='valorContainer' id="lblvalorContainer">
-            <p class='valorTitle' id="lblvalorTitle"> Preço </p>
-            <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
-          </div>
-        </div>
-      </div>
-    </main>
+   
   </div>
 </body>
 

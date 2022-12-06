@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>Compra</title>
+
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            background-color: #E1E1E8;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background: #5F9DF7;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .TitleHeader {
+            color: #FFFFFF;
+        }
+
+        .headercontent {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .ButtonBack {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .ButtonQuestion {
+            background: transparent;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .Carrinho {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            border-bottom: 1px solid #AEAEB3;
+            background: #FFFFFF;
+        }
+
+        .quantidade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 30px;
+            height: 30px;
+
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 50%;
+
+            color: #FFFFFF;
+            background-color: #FD841F;
+        }
+
+        .logoGasName {
+            font-size: 12px;
+            font-weight: 500;
+            color: #7A7A80;
+        }
+
+        .logoGasNameContainer {
+            font-size: 12px;
+            font-weight: 500;
+            color: #7A7A80;
+        }
+
+        .valorNumber {
+            font-weight: bold;
+
+        }
+
+        .cardHeader {
+            width: 70%;
+            height: 90px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            margin-top: 10px;
+
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            background: #FFFFFF;
+        }
+
+        .CardDetail {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+        .ph-storefront {
+            width: 20%;
+        }
+
+        .CardDetailHeader {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .CardDetailSubHeader {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .titleStore {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15;
+            color: #7A7A80;
+        }
+
+        .cardContent {
+            width: 70%;
+            height: 260px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 40px;
+
+            margin-bottom: 10px;
+
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            background: #FFFFFF;
+        }
+
+        .imageGas {
+            width: 150px;
+            margin: 0;
+        }
+
+        .ButtonGasContainer {
+            width: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .ButtonGasPlus {
+            width: 28px;
+            height: 28px;
+
+            background: #E1E1E8;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+
+            font-size: 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .ButtonGasMinus {
+            width: 28px;
+            height: 28px;
+
+            background: #E1E1E8;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+
+            font-size: 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .quantidadeGas {
+            margin: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 50px;
+            height: 50px;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+
+            border-radius: 50%;
+
+            color: #FFFFFF;
+            background-color: #FD841F;
+
+            z-index: 1;
+            position: absolute;
+        }
+
+        .GasContainer {
+
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .CardContainer {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            padding-top: 15px;
+        }
+
+        .ButtonAddCarrinho {
+            width: 50%;
+            height: 40px;
+
+            border: none;
+            border-radius: 50px;
+
+            background: #5F9DF7;
+            color: #FFFFFF;
+
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .storeContainer {
+            width: 20%;
+        }
+
+        .ButtonProps {
+            width: 100%;
+            margin-top: 20px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .ButtonContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .Button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background: #5F9DF7;
+            border-radius: 50px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="headercontainer">
+        <!-- Header Config -->
+        <div class="headercontent">
+            <button class="ButtonBack">
+                <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+            </button>
+
+            <p class='TitleHeader'> Selecionar produto </p>
+            <button class="ButtonQuestion">
+                <i class="ph-question" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"
+                    id="lbliconquestion"></i>
+            </button>
+        </div>
+        <div class="Stap">
+            <!-- Colocar stap depois -->
+        </div>
+        <div class="Carrinho">
+            <p class="quantidade" id="lblquantidade">1</p>
+            <div style="display: flex; flex-direction: row; gap: 4px;">
+                <p class='logoGasName' id="lbllogoGasName"> SupergasBraz</p>
+                <p class='logoGasNameContainer' id="lbllogoGasNameContainer"> - Botijão de 13kg </p>
+            </div>
+            <p class='valorNumber' id="lblvalorNumber"> R$<b>79,99 </p>
+        </div>
+    </header> <!-- Header Config Finish -->
+
+    <main>
+        <div class="CardContainer"></div>
+        <!-- Main Config -->
+        <div class="cardHeader">
+            <div class="storeContainer">
+                <i class="ph-storefront" style="font-size: 40px;"></i>
+            </div>
+
+
+            <div class='CardDetail'>
+
+                <div class='CardDetailHeader'>
+                    <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
+                    <div class='logoGasNameContainer' id="lbllogoGasNameContainer">
+                        <p class='logoGasName' id="lbllogoGasName"
+                            style="font-size: 12px;font-weight: bold;color: #FFFFFF;height: 30px; padding:0 5px; display: flex;align-items: center;justify-content: center;background: #03B252;border-radius: 2px;">
+                            SupergasBraz
+                        </p>
+                    </div>
+                </div>
+
+                <div class='CardDetailSubHeader'>
+                    <p class='noteNumber' id="lblnoteNumber">
+                        <b>4.8</b>
+                        <i class='ph-star-fill' style="font-size:15px; color: #ffd700;" id="lbliconstar"></i>
+                    </p>
+                    <p class='timeNumber'><b>40-30</b> min</p>
+                    <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cardContent">
+            <div class='CardContainer'>
+                <div class="TitleResume">
+                    <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
+                    <p class='logoGasNameContainer' id="lbllogoGasNameContainer" style="font-weight: bold;"> Botijão
+                        de 13kg </p>
+                    <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
+                </div>
+                <div class='ButtonGasContainer'>
+                    <button class='ButtonGasMinus'><i class="ph-minus-circle"
+                            style="font-size: 35px; color: #7A7A80;"></i></button>
+                    <div class='GasContainer'>
+                        <p class="quantidadeGas" id="lblquantidade">1</p>
+                        <img src="./assets/gas_cozinha.png" class="imageGas" alt="">
+                    </div>
+                    <button class='ButtonGasPlus'><i class="ph-plus-circle"
+                            style="font-size: 35px; color: #7A7A80;"></i></button>
+                </div>
+            </div>
+
+            <Button class="ButtonAddCarrinho">
+                Adicionar item ao carrinho
+            </Button>
+        </div>
+
+        <div class='ButtonProps'>
+            <div class='ButtonContainer'>
+                <buttom class="Button">
+                    <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </buttom>
+                <p class='TitleButton'>Voltar</p>
+            </div>
+
+            <div class='ButtonContainer'>
+                <buttom class="Button">
+                    <i class="ph-caret-right" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </Buttom>
+                <p class='TitleButton'>Próximo</p>
+            </div>
+        </div>
+
+    </main><!-- Main Config Finish-->
+</body>
+
+</html>
