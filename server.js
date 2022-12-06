@@ -25,8 +25,8 @@ app.get("/Compra", function (req, res){
     res.sendFile(__dirname + "/src/compra.html");
 });
 
-app.get("Pagemento", function (req, res){
-    res.sendFile(__dirname + "/src/Pagemento.html");
+app.get("/Pagamento", function (req, res){
+    res.sendFile(__dirname + "/src/Pagamento.html");
 });
 
 app.get("/Confirmacao", function (req, res){

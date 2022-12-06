@@ -312,7 +312,7 @@
 </head>
 
 <body>
-    <div class='Container'>
+    <div class='Container' id="ContainerCadastro">
         <div class='ImageContainer'>
             <img class='Image' src="./assets/gas.png" alt="gas">
         </div>
@@ -345,16 +345,16 @@
                         </div>
                         <div class='valorContainer' id="lblvalorContainer">
                             <p class='valorTitle' id="lblvalorTitle"> Preço </p>
-                            <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
+                            <p class='valorNumber' id="lblvalorNumber"> R$<b>79,99</b></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div> <!-- Card config finish -->
 
-        <div class='InputContainer'>
-            <input class='InputDDD' placeholder="DDD" maxLength={2} minLength={1} type="number" />
-            <input class='InputContact' placeholder="Seu Telefone" maxLength={10} minLength={1} type="number" />
+        <div class='InputContainer' id="InputContainer">
+            <input class='InputDDD' id="InputDDD" placeholder="DDD" maxLength={2} minLength={1} type="number" />
+            <input class='InputContact'id="InputContact" placeholder="Seu Telefone" maxLength={10} minLength={1} type="number" />
         </div>
 
 
@@ -362,14 +362,14 @@
         <p class='Title'> sobre sua entrega.</p>
         <div class='ButtonProps'>
             <div class='ButtonContainer'>
-                <buttom class="Button">
+                <buttom class="Button" id="ButtonVoltar">
                     <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
                 </buttom>
                 <p class='TitleButton'>Voltar</p>
             </div>
 
             <div class='ButtonContainer'>
-                <buttom class="Button">
+                <buttom class="Button" id="ButtonNext">
                     <i class="ph-caret-right" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
                 </Buttom>
                 <p class='TitleButton'>Próximo</p>
