@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+</head>
+<body>
+    <H1>Hello</H1>
+    <h3>Aquivos migrados para a página de compra, em caso de duvida entre em contato com o desenvolvedor!</h3>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -196,159 +209,12 @@
 
         /* Styles cards */
 
-        .CardsContainer {
-            width: 75%;
-            height: 120px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            background: #ffffff;
-            margin: 5px 0;
-            padding: 10px 35px 10px 20px;
-            border-radius: 5px;
-        }
-
-        .InfoContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .TitleName {
-            color: #5F9DF7;
-        }
-
-        .ContentContainer {
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .ImgContainer {
-            display: flex;
-            gap: 10px;
-        }
-
-        .Logoimage {
-            width: 30px;
-        }
-
-        .Title {
-            font-size: 14px;
-            font-weight: 500;
-            color: #7a7a80;
-            margin-left: 5px;
-            font-weight: bold;
-        }
-
-        .RadioBox {
-            width: 28px;
-        }
+        
     </style>
 </head>
 
 <body>
-    <header id="headercontainer">
-        <!-- Header Config -->
-        <div class="headercontent">
-            <button class="ButtonBack" id="ButtonBack">
-                <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
-            </button>
-            <p class='TitleHeader'> Selecionar produto </p>
-            <button class="ButtonQuestion" id="ButtonQuestion">
-                <i class="ph-question" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"
-                    id="lbliconquestion"></i>
-            </button>
-        </div>
-        <!-- Stap Config -->
-        <div class="StapContainer">
-            <div class="stap" id="stap">
-                <div class="stapNumber" id="stap1">
-                    <p class="number" id="number">1</p>
-                </div>
-                <p>Compra</p>
-            </div>
-            <div class="stapBar" id="stapBar1"></div>
-            <div class="stap" id="stap">
-                <div class="stapNumber" id="stap2">
-                    <p class="number" id="number">2</p>
-                </div>
-                <p>Pagamento</p>
-            </div>
-            <div class="stapBar" id="stapBar2"></div>
-            <div class="stap" id="stap">
-                <div class="stapNumber" id="stap3">
-                    <p class="number" id="number">3</p>
-                </div>
-                <p>Confirmação</p>
-            </div>
-        </div> <!-- Stap Config Finish -->
-
-        <div class="Carrinho">
-            <p class="quantidade" id="lblquantidade">1</p>
-            <div style="display: flex; flex-direction: row; gap: 4px;">
-                <p class='logoGasName' id="lbllogoGasName"> SupergasBraz</p>
-                <p class='logoGasNameContainer' id="lbllogoGasNameContainer"> - Botijão de 13kg </p>
-            </div>
-            <p class='valorNumber' id="lblvalorNumber"> R$<b>79,99 </p>
-        </div>
-
-    </header> <!-- Header Config Finish -->
-
-    <main>
-        <!-- Cards -->
-        <div class='CardsContainer' id="CardsContainer">
-            <div class='InfoContainer' id="InfoContainer">
-                <p class='TitleName' id="TitleName">Crédito</p>
-                <div class='ContentContainer' id="ContentContainer">
-                    <div class='ImgContainer' id="ImgContainer">
-                        <img class='Logoimage' id="Logoimage" src='./assets/Mastercard.svg' alt='' />
-                        <img class='Logoimage' id="Logoimage" src='./assets/Visa.svg' alt='' />
-                        <img class='Logoimage' id="Logoimage" src='./assets/Elo.svg' alt='' />
-                    </div>
-                </div>
-            </div class='InfoContainer' id="InfoContainer">
-            <input type="radio" class="RadioBox" id="Radio" name="1" />
-        </div class='CardsContainer' id="CardsContainer">
-        <div class='CardsContainer' id="CardsContainer">
-            <div class='InfoContainer' id="InfoContainer">
-                <p class='TitleName' id="TitleName">Débito</p>
-                <div class='ContentContainer' id="ContentContainer">
-                    <i class="ph-credit-card" style="font-size: 32px; color:#5F9DF7"></i>
-                    <p class='Title' id="Title">Pague na Entrega</p>
-                </div>
-            </div class='InfoContainer' id="InfoContainer">
-            <input type="radio" class="RadioBox" id="Radio" name="1" />
-        </div class='CardsContainer' id="CardsContainer">
-        <div class='CardsContainer' id="CardsContainer">
-            <div class='InfoContainer' id="InfoContainer">
-                <p class='TitleName' id="TitleName">Dinheiro</p>
-                <div class='ContentContainer' id="ContentContainer">
-                    <i class="ph-coins" style="font-size: 32px; color:#5F9DF7"></i>
-                    <p class='Title' id="Title">Pague na Entrega</p>
-                </div>
-            </div class='InfoContainer' id="InfoContainer">
-            <input type="radio" class="RadioBox" id="Radio" name="1" />
-        </div class='CardsContainer' id="CardsContainer">
-
-        <!-- Button -->
-        <div class='ButtonProps'>
-            <div class='ButtonContainer'>
-                <buttom class="Button" id="Button">
-                    <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
-                </buttom>
-                <p class='TitleButton'>Voltar</p>
-            </div>
-            <div class='ButtonContainer'>
-                <buttom class="Button" id="Button">
-                    <i class="ph-caret-right" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
-                </Buttom>
-                <p class='TitleButton'>Próximo</p>
-            </div>
-        </div>
-    </main><!-- Main Config Finish-->
+    
 </body>
 
-</html>
+</html> -->

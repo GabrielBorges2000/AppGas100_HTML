@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/phosphor-icons"></script>
-
+    <link rel="stylesheet" href="./styles/Compra.css">
     <title>Compra</title>
 
     <style>
@@ -19,6 +19,7 @@
             padding: 0;
             background-color: #E1E1E8;
             font-family: 'Roboto', sans-serif;
+
         }
 
         header {
@@ -33,11 +34,21 @@
         }
 
         main {
-            width: 100%;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #E1E1E8;
+
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .TitleHeader {
@@ -52,12 +63,7 @@
             background: #5F9DF7;
         }
 
-        .ButtonBack {
-            background: transparent;
-            border: 0;
-            cursor: pointer;
-        }
-
+        .ButtonBack,
         .ButtonQuestion {
             background: transparent;
             border: 0;
@@ -65,63 +71,51 @@
         }
 
         .Carrinho {
-            width: 100%;
+            width: 100vw;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
 
             border-bottom: 1px solid #AEAEB3;
             border-top: 1px solid #AEAEB3;
-;
+            ;
             background: #FFFFFF;
         }
 
-        .quantidade {
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            width: 30px;
-            height: 30px;
 
-            font-size: 12px;
-            font-weight: 500;
-            border-radius: 50%;
-
-            color: #FFFFFF;
-            background-color: #FD841F;
-        }
-
-        .logoGasName {
-            font-size: 12px;
-            font-weight: 500;
-            color: #7A7A80;
-        }
-
+        .logoGasName,
         .logoGasNameContainer {
             font-size: 12px;
             font-weight: 500;
             color: #7A7A80;
         }
 
-        .valorNumber {
-            font-weight: bold;
-
-        }
-
-        .cardHeader {
-            width: 70%;
-            height: 90px;
+        .cardHeader,
+        .cardContent {
+            width: 70vw;
 
             display: flex;
+
             justify-content: space-between;
             align-items: center;
             padding: 0 40px;
-            margin-top: 10px;
+        }
 
+        .cardHeader {
+
+            height: 90px;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+            background: #FFFFFF;
+        }
 
+        .cardContent {
+            height: 260px;
+            flex-direction: column;
+            margin-bottom: 10px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
             background: #FFFFFF;
         }
 
@@ -159,24 +153,7 @@
             color: #7A7A80;
         }
 
-        .cardContent {
-            width: 70%;
-            height: 260px;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-
-            padding: 0 40px;
-
-            margin-bottom: 10px;
-
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-
-            background: #FFFFFF;
-        }
 
         .imageGas {
             width: 120px;
@@ -186,30 +163,13 @@
 
         .ButtonGasContainer {
             width: 60%;
-
             display: flex;
             align-items: center;
             justify-content: center;
 
         }
 
-        .ButtonGasPlus {
-            width: 20px;
-            height: 20px;
-
-            background: #E1E1E8;
-            border: 0;
-            border-radius: 50%;
-            cursor: pointer;
-
-            font-size: 28px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
+        .ButtonGasPlus,
         .ButtonGasMinus {
             width: 20px;
             height: 20px;
@@ -248,6 +208,22 @@
 
             z-index: 1;
             position: absolute;
+        }
+
+        .quantidade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 30px;
+            height: 30px;
+
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 50%;
+
+            color: #FFFFFF;
+            background-color: #FD841F;
         }
 
         .GasContainer {
@@ -324,165 +300,337 @@
             color: #47474D;
             align-items: center;
         }
+
         .StapContainer {
+            width: 80%;
+            height: auto;
+            background: #FFFFFF;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 15px;
+
+        }
+
+        .stapNumber {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #AEAEB3;
+            border-radius: 50%;
+            background: #efeff5;
+            color: #47474D;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .stapBar {
+            width: 25%;
+            height: 6px;
+            background: #5f9cf7ab;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        .stap {
+            width: 5%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        /* Pagamento Styles */
+
+        .CardsContainer {
+            width: 75%;
+            height: 120px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: #ffffff;
+            margin: 5px 0;
+            padding: 10px 35px 10px 20px;
+            border-radius: 5px;
+        }
+
+        .InfoContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .TitleName {
+            color: #5F9DF7;
+        }
+
+        .ContentContainer {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .ImgContainer {
+            display: flex;
+            gap: 10px;
+        }
+
+        .Logoimage {
+            width: 30px;
+        }
+
+        .Title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #7a7a80;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+
+        .RadioBox {
+            width: 28px;
+        }
+
+        /* Style Confirmação */
+
+        .DataContainer {
+            width: 50vmax;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #03B252;
+            background: #efeff565;
+            border-radius: 10px;
+            margin-top: 20px;
+
+            @media(max-width: 720px) {
                 width: 80%;
-                height: auto;
-                background: #FFFFFF;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                padding-top: 15px;
-                
             }
+        }
 
-            .stapNumber {
-                width: 25px;
-                height: 25px;
-                border: 1px solid #AEAEB3;
-                border-radius: 50%;
-                background: #efeff5;
-                color: #47474D;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-            }
-
-            .stapBar {
-                width: 25%;
-                height: 6px;
-                background: #5f9cf7ab;
-                border-radius: 10px;
-                margin-bottom: 50px;
-            }
-
-            .stap {
-                width: 5%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                
-            }
+        .title {
+            font-size: 16px;
+            font-weight: 500;
+        }
     </style>
+
 </head>
 
 <body>
-
-    <header id="headercontainer">
-        <!-- Header Config -->
-        <div class="headercontent">
-            <button class="ButtonBack" id="ButtonBack">
-                <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
-            </button>
-
-            <p class='TitleHeader'> Selecionar produto </p>
-            <button class="ButtonQuestion" id="ButtonQuestion">
-                <i class="ph-question" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"
-                    id="lbliconquestion"></i>
-            </button>
-        </div>
-
-        <div class="StapContainer">
-
-            <div class="stap" id="stap">
-                <div class="stapNumber" id="stap1">
-                    <p class="number" id="number">1</p>
+    <div class="page" id="page">
+        <header id="headercontainer">
+            <!-- Header Config -->
+            <div class="headercontent">
+                <button class="ButtonBack" id="ButtonBack">
+                    <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </button>
+                <p class='TitleHeader'> Selecionar produto </p>
+                <button class="ButtonQuestion" id="ButtonQuestion">
+                    <i class="ph-question" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"
+                        id="lbliconquestion"></i>
+                </button>
+            </div>
+            <div class="StapContainer">
+                <div class="stap" id="stap">
+                    <div class="stapNumber" id="stap1">
+                        <p class="number" id="number">1</p>
+                    </div>
+                    <p>Compra</p>
                 </div>
-                <p>Compra</p>
-            </div>
-
-            <div class="stapBar" id="stapBar1"></div>
-
-            <div class="stap" id="stap">
-                <div class="stapNumber" id="stap2">
-                    <p class="number" id="number">2</p>
+                <div class="stapBar" id="stapBar1"></div>
+                <div class="stap" id="stap">
+                    <div class="stapNumber" id="stap2">
+                        <p class="number" id="number">2</p>
+                    </div>
+                    <p>Pagamento</p>
                 </div>
-                <p>Pagamento</p>
-            </div>
-
-            <div class="stapBar" id="stapBar2"></div>
-
-            <div class="stap" id="stap">
-                <div class="stapNumber" id="stap3">
-                    <p class="number" id="number">3</p>
+                <div class="stapBar" id="stapBar2"></div>
+                <div class="stap" id="stap">
+                    <div class="stapNumber" id="stap3">
+                        <p class="number" id="number">3</p>
+                    </div>
+                    <p>Confirmação</p>
                 </div>
-                <p>Confirmação</p>
             </div>
-
-        </div>
-
-
-        <div class="Carrinho">
-            <p class="quantidade" id="lblquantidade">1</p>
-            <div style="display: flex; flex-direction: row; gap: 4px;">
-                <p class='logoGasName' id="lbllogoGasName"> SupergasBraz</p>
-                <p class='logoGasNameContainer' id="lbllogoGasNameContainer"> - Botijão de 13kg </p>
+            <div class="Carrinho">
+                <p class="quantidade" id="lblquantidade">1</p>
+                <div style="display: flex; flex-direction: row; gap: 4px;">
+                    <p class='logoGasName' id="lbllogoGasName"> SupergasBraz</p>
+                    <p class='logoGasNameContainer' id="lbllogoGasNameContainer"> - Botijão de 13kg </p>
+                </div>
+                <p class='valorNumber' id="lblvalorCarrinho"> R$<b>79,99 </p>
             </div>
-            <p class='valorNumber' id="lblvalorNumber"> R$<b>79,99 </p>
-        </div>
-    </header> <!-- Header Config Finish -->
-
-    <main>
-        <div class="CardContainer"></div>
-        <!-- Main Config -->
-        <div class="cardHeader">
-            <div class="storeContainer">
-                <i class="ph-storefront" style="font-size: 40px;"></i>
-            </div>
+        </header> <!-- Header Config Finish -->
 
 
-            <div class='CardDetail'>
 
-                <div class='CardDetailHeader'>
-                    <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
-                    <div class='logoGasNameContainer' id="lbllogoGasNameContainer">
-                        <p class='logoGasName' id="lbllogoGasName"
-                            style="font-size: 12px;font-weight: bold;color: #FFFFFF;height: 30px; padding:0 5px; display: flex;align-items: center;justify-content: center;background: #03B252;border-radius: 2px;">
-                            SupergasBraz
+
+        <main class="Compra" id="Compra">
+            <div class="CardContainer"></div>
+            <!-- Main Config -->
+            <div class="cardHeader">
+                <div class="storeContainer">
+                    <i class="ph-storefront" style="font-size: 40px;"></i>
+                </div>
+
+
+                <div class='CardDetail'>
+
+                    <div class='CardDetailHeader'>
+                        <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
+                        <div class='logoGasNameContainer' id="lbllogoGasNameContainer">
+                            <p class='logoGasName' id="lbllogoGasName"
+                                style="font-size: 12px;font-weight: bold;color: #FFFFFF;height: 30px; padding:0 5px; display: flex;align-items: center;justify-content: center;background: #03B252;border-radius: 2px;">
+                                SupergasBraz
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class='CardDetailSubHeader'>
+                        <p class='noteNumber' id="lblnoteNumber">
+                            <b>4.8</b>
+                            <i class='ph-star-fill' style="font-size:15px; color: #ffd700;" id="lbliconstar"></i>
                         </p>
+                        <p class='timeNumber'><b>40-30</b> min</p>
+                        <p class='valorNumber' id="lblvalorStore"> R$<b>79,99 </p>
                     </div>
-                </div>
 
-                <div class='CardDetailSubHeader'>
-                    <p class='noteNumber' id="lblnoteNumber">
-                        <b>4.8</b>
-                        <i class='ph-star-fill' style="font-size:15px; color: #ffd700;" id="lbliconstar"></i>
-                    </p>
-                    <p class='timeNumber'><b>40-30</b> min</p>
-                    <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="cardContent">
-            <div class='CardContainer'>
-                <div class="TitleResume">
-                    <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
-                    <p class='logoGasNameContainer' id="lbllogoGasNameContainer" style="font-weight: bold;"> Botijão
-                        de 13kg </p>
-                    <p class='valorNumber' id="lblvalorNumber"> R$<b>79</b>,99 </p>
-                </div>
-                <div class='ButtonGasContainer'>
-                    <button class='ButtonGasMinus'><i class="ph-minus-circle"
-                            style="font-size: 28px; color: #7A7A80;"></i></button>
-                    <div class='GasContainer'>
-                        <p class="quantidadeGas" id="lblquantidade">1</p>
-                        <img src="./assets/gas_cozinha.png" class="imageGas" alt="">
-                    </div>
-                    <button class='ButtonGasPlus'><i class="ph-plus-circle"
-                            style="font-size: 28px; color: #7A7A80;"></i></button>
                 </div>
             </div>
 
-            <Button class="ButtonAddCarrinho">
-                Adicionar item ao carrinho
-            </Button>
-        </div>
+            <div class="cardContent">
+                <div class='CardContainer'>
+                    <div class="TitleResume">
+                        <p class='titleStore' id="lbltitleStore"> Tonho Gas </p>
+                        <p class='logoGasNameContainer' id="lbllogoGasNameContainer" style="font-weight: bold;"> Botijão
+                            de 13kg </p>
+                        <p class='valorNumber' id="lblvalorTotal"> R$<b>79,99 </p>
+                    </div>
+                    <div class='ButtonGasContainer'>
+                        <button class='ButtonGasMinus'><i class="ph-minus-circle"
+                                style="font-size: 28px; color: #7A7A80;"></i></button>
+                        <div class='GasContainer'>
+                            <p class="quantidadeGas" id="lblquantidade">1</p>
+                            <img src="./assets/gas_cozinha.png" class="imageGas" alt="">
+                        </div>
+                        <button class='ButtonGasPlus' id="ButtonGasPlus">
+                            <i class="ph-plus-circle" style="font-size: 28px; color: #7A7A80;"></i></button>
+                    </div>
+                </div>
 
-        <div class='ButtonProps'>
+                <Button class="ButtonAddCarrinho" id="ButtonAddCarrinho">
+                    Adicionar item ao carrinho
+                </Button>
+            </div>
+        </main>
+
+
+
+
+
+
+        <main class="Pagamento" id="Pagamento">
+            <!-- Cards -->
+            <div class='CardsContainer' id="CardsContainer">
+                <div class='InfoContainer' id="InfoContainer">
+                    <p class='TitleName' id="TitleName">Crédito</p>
+                    <div class='ContentContainer' id="ContentContainer">
+                        <div class='ImgContainer' id="ImgContainer">
+                            <img class='Logoimage' id="Logoimage" src='./assets/Mastercard.svg' alt='' />
+                            <img class='Logoimage' id="Logoimage" src='./assets/Visa.svg' alt='' />
+                            <img class='Logoimage' id="Logoimage" src='./assets/Elo.svg' alt='' />
+                        </div>
+                    </div>
+                </div class='InfoContainer' id="InfoContainer">
+                <input type="radio" class="RadioBox" id="Radio" name="1" />
+            </div class='CardsContainer' id="CardsContainer">
+            <div class='CardsContainer' id="CardsContainer">
+                <div class='InfoContainer' id="InfoContainer">
+                    <p class='TitleName' id="TitleName">Débito</p>
+                    <div class='ContentContainer' id="ContentContainer">
+                        <i class="ph-credit-card" style="font-size: 32px; color:#5F9DF7"></i>
+                        <p class='Title' id="Title">Pague na Entrega</p>
+                    </div>
+                </div class='InfoContainer' id="InfoContainer">
+                <input type="radio" class="RadioBox" id="Radio" name="1" />
+            </div class='CardsContainer' id="CardsContainer">
+            <div class='CardsContainer' id="CardsContainer">
+                <div class='InfoContainer' id="InfoContainer">
+                    <p class='TitleName' id="TitleName">Dinheiro</p>
+                    <div class='ContentContainer' id="ContentContainer">
+                        <i class="ph-coins" style="font-size: 32px; color:#5F9DF7"></i>
+                        <p class='Title' id="Title">Pague na Entrega</p>
+                    </div>
+                </div class='InfoContainer' id="InfoContainer">
+                <input type="radio" class="RadioBox" id="Radio" name="1" />
+            </div class='CardsContainer' id="CardsContainer">
+
+        </main><!-- Main Config Finish-->
+
+
+
+
+
+        <main class="Confirmacao" id="Confirmacao">
+
+            <!-- Data Config -->
+            <div class='DataContainer' id="DataContainer">
+                <h1>Pedido Confirmado</h1>
+                <img src="./assets/concluido.png" style="width: 100px;" />
+                <h2>Resumo</h2>
+                <div class='ResumeContainer' id="ResumeContainer">
+                    <h4>Nome: <p class="title" id="titleName">Gabriel Borges Olivera</p>
+                    </h4>
+                    <h4>Endereço: <p class="title" id="titleEndereço">Praça Miguel Ortega, 340</p>
+                    </h4>
+                    <h4>Bairro: <p class="title" id="titleBairro">Pq. Assunção</p>
+                    </h4>
+                    <h4>Complemento: <p class="title" id="titleComplemento">Loja 5</p>
+                    </h4>
+                    <h4>CEP: <p class="title" id="titleComplemento">06754-160</p>
+                    </h4>
+                    <h4>Contato: <p class="title" id="titleContato">(11) 93435-4029</p>
+                    </h4>
+                    <h4>Gas: <p class="title" id="titleGas">SupergasBraz - 13kg</p>
+                    </h4>
+                    <h4>Estabelecimento: <p class="title" id="titleEstabelecimento">Tonho Gás</p>
+                    </h4>
+                    <h4>Forma de Pagamento: <p class="title" id="titlePagamento">Débito</p>
+                    </h4>
+                    <h4>Tempo Estimado para Entrega: <p class="title" id="titleTime">15-30</p>
+                    </h4>
+                    <h4>Valor Total: <p class="title" id="titleValor">R$ 79,99</p>
+                    </h4>
+                </div>
+            </div>
+
+            <!-- Data Config Finish-->
+
+
+
+            <!-- Button -->
+            <div class='ButtonProps'>
+
+                <div class='ButtonContainer'>
+                    <buttom class="Button" id="Button">
+                        <i class="ph-caret-right" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                    </Buttom>
+                    <p class='TitleButton'>Sair</p>
+                </div>
+            </div>
+        </main><!-- Main Config Finish-->
+
+
+
+
+
+        <footer class='ButtonProps'>
             <div class='ButtonContainer'>
                 <buttom class="Button">
                     <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
@@ -496,9 +644,9 @@
                 </Buttom>
                 <p class='TitleButton'>Próximo</p>
             </div>
-        </div>
+        </footer>
 
-    </main><!-- Main Config Finish-->
+    </div>
 </body>
 
 </html>

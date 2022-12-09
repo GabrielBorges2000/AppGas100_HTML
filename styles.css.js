@@ -15,4 +15,4 @@ export const theme = {
     title: '#47474D',
     
 
-} as const
+}
