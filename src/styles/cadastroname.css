@@ -105,6 +105,7 @@ body {
     background: #5F9DF7;
     border-radius: 50px;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .TitleButton {
