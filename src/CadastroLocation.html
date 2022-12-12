@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="./styles/cadastrolocation.css">
+    <title>CadastroLocation</title>
+
+
+</head>
+
+<body>
+    <div class='Container' id="ContainerCadastroName">
+        <div class='ImageContainer'>
+            <img class='Image' src="./assets/Gas.png" alt="gas">
+        </div>
+
+        <form action="location">
+            <div class='InputContainer' id="InputContainer">
+                <label for="123"></label>
+                <input class='InputName' id="InputCep" placeholder="Cep" maxLength={2} type="number" required />
+                <input class='InputName' id="InputLogradouro" placeholder="Logradouro" minLength={1} type="text" required/>
+                <input class='InputName' id="InputNumero" placeholder="Número" minLength={1} type="text" required/>
+                <input class='InputName' id="InputBairro" placeholder="Bairro" minLength={1} type="text" required/>
+                <input class='InputName' id="InputBloco" placeholder="Bloco" minLength={1} type="text" />
+                <input class='InputName' id="InputApartamento" placeholder="Apartamento" minLength={1} type="text" />
+            </div>
+            <textarea name="textareaComplemento" id="textareaComplemento" cols="30" rows="10"
+                placeholder="Complemento"></textarea>
+            <textarea name="textareaReferência" id="textareaReferência" cols="30" rows="10"
+                placeholder="Ponto de referência"></textarea>
+            <!-- <input class='InputName' id="InputEstado" placeholder="Estado" minLength={1} type="text" />
+                <input class='InputName' id="InputCidade" placeholder="Cidade" minLength={1} type="text" /> -->
+
+            <select class='InputName' name="Estado" id="selectEstado" required>
+                <option value="Estado">Estado</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Ceará">Ceará</option>
+            </select>
+            <select class='InputName' name="Estado" id="selectEstado" required>
+                <option value="Estado">Cidade</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Ceará">Ceará</option>
+            </select>
+            <div class="checkbox" id="">
+                <input type="checkbox" name="datasave" id="datasave" />
+                <p>Endereço Padrão</p>
+            </div>
+
+        </form>
+
+
+
+        <p class='Title'> Usaremos seu endereço para realizar sua entrega. </p>
+        <div class='ButtonProps'>
+            <div class='ButtonContainer'>
+                <buttom class="Button" id="ButtonVoltar">
+                    <i class="ph-caret-left" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </buttom>
+                <p class='TitleButton'>Voltar</p>
+            </div>
+
+            <div class='ButtonContainer'>
+                <buttom class="Button" id="ButtonNext" type="submit">
+                    <i class="ph-caret-right" style="font-size: 24px; color: #FFFFFF; font-weight: bold;"></i>
+                </Buttom>
+                <p class='TitleButton'>Próximo</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -21,6 +21,10 @@ app.get("/cadastro/name", function (req, res){
     res.sendFile(__dirname + "/src/CadastroName.html");
 });
 
+app.get("/cadastro/location", function (req, res){
+    res.sendFile(__dirname + "/src/CadastroLocation.html");
+});
+
 app.get("/Compra", function (req, res){
     res.sendFile(__dirname + "/src/compra.html");
 });
